@@ -3,6 +3,8 @@ import { useLocation, Link } from 'react-router-dom';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import FAQAccordion from '../components/FAQAccordion';
 
+const LINKEDIN_URL = 'https://www.linkedin.com/in/benjamin-ennis-ab3a8b60/';
+
 const principles = [
   {
     title: 'Database-first architecture',
@@ -156,8 +158,60 @@ export default function About() {
         </div>
       </section>
 
+      {/* Meet the Founder */}
+      <section className="section-padding bg-slate-50" id="founder">
+        <div className="container-content max-w-3xl">
+          <h2 className="mb-10 text-2xl font-bold text-slate-900 sm:text-3xl">Meet the founder</h2>
+          <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
+            {/* Avatar */}
+            <div className="flex-shrink-0">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-indigo-600 text-xl font-bold text-white shadow-md">
+                BE
+              </div>
+            </div>
+            {/* Bio */}
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900">Ben Ennis</h3>
+                <p className="text-sm font-medium text-indigo-600">Founder, Ennis Studio</p>
+              </div>
+              <div className="space-y-4 text-base leading-relaxed text-slate-600">
+                <p>
+                  Ben Ennis is a software entrepreneur and product builder based in Grand Rapids,
+                  Michigan. With a background spanning enterprise software, AI-driven systems, and
+                  SaaS product development, Ben founded Ennis Studio to bring structured,
+                  professional-grade Notion operating systems to specialized industries.
+                </p>
+                <p>
+                  His approach is rooted in real-world systems thinking: start with the data, build
+                  for the actual user, and ship something that works on day one. Ennis Studio is the
+                  product of that philosophy applied to knowledge work.
+                </p>
+              </div>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors duration-200 hover:border-indigo-300 hover:text-indigo-600"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-white">
         <div className="container-content">
           <h2 className="mb-12 text-2xl font-bold text-slate-900 sm:text-3xl">Our philosophy</h2>
           <div className="grid gap-12 lg:grid-cols-2">
@@ -211,7 +265,7 @@ export default function About() {
       </section>
 
       {/* Process */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-slate-50">
         <div className="container-content">
           <h2 className="mb-12 text-2xl font-bold text-slate-900 sm:text-3xl">
             How we design every template
