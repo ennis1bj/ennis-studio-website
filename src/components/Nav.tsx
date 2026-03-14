@@ -14,30 +14,19 @@ export default function Nav() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-navy-100 bg-white/95 backdrop-blur-sm">
       <nav
         className="mx-auto flex max-w-content items-center justify-between px-6 py-4 md:px-8"
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2" aria-label="Ennis Studio home">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <rect width="32" height="32" rx="8" fill="#4F46E5" />
-            <path
-              d="M8 10h16M8 16h12M8 22h8"
-              stroke="white"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span className="text-lg font-bold tracking-tight text-slate-900">
+        <Link to="/" className="flex items-center gap-2.5" aria-label="Ennis Studio home">
+          <img
+            src="/images/ennis-studio-icon.png"
+            alt="Ennis Studio"
+            className="h-8 w-8 rounded-lg object-cover shadow-sm"
+          />
+          <span className="text-lg font-bold tracking-tight text-navy-900">
             Ennis Studio
           </span>
         </Link>
@@ -50,8 +39,8 @@ export default function Nav() {
               to={link.to}
               className={`text-sm font-medium transition-colors duration-200 ${
                 location.pathname === link.to
-                  ? 'text-indigo-600'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'text-gold-600'
+                  : 'text-navy-600 hover:text-navy-900'
               }`}
             >
               {link.label}
@@ -64,7 +53,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 transition-colors hover:bg-slate-100 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-navy-600 transition-colors hover:bg-navy-50 md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
@@ -85,7 +74,7 @@ export default function Nav() {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`border-t border-slate-100 bg-white md:hidden ${mobileOpen ? 'block' : 'hidden'}`}
+        className={`border-t border-navy-100 bg-white md:hidden ${mobileOpen ? 'block' : 'hidden'}`}
         role="navigation"
         aria-label="Mobile navigation"
       >
@@ -97,8 +86,8 @@ export default function Nav() {
               onClick={() => setMobileOpen(false)}
               className={`rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
                 location.pathname === link.to
-                  ? 'bg-indigo-50 text-indigo-600'
-                  : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                  ? 'bg-gold-50 text-gold-700'
+                  : 'text-navy-600 hover:bg-navy-50 hover:text-navy-900'
               }`}
             >
               {link.label}

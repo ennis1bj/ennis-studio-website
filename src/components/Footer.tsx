@@ -42,33 +42,22 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
+    <footer className="border-t border-navy-200 bg-navy-950 text-white">
       <div className="mx-auto max-w-content px-6 py-12 md:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link to="/" className="flex items-center gap-2" aria-label="Ennis Studio home">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <rect width="32" height="32" rx="8" fill="#4F46E5" />
-                <path
-                  d="M8 10h16M8 16h12M8 22h8"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <span className="text-base font-bold tracking-tight text-slate-900">
+            <Link to="/" className="flex items-center gap-2.5" aria-label="Ennis Studio home">
+              <img
+                src="/images/ennis-studio-icon.png"
+                alt="Ennis Studio"
+                className="h-8 w-8 rounded-lg object-cover"
+              />
+              <span className="text-base font-bold tracking-tight text-white">
                 Ennis Studio
               </span>
             </Link>
-            <p className="mt-2 text-sm text-slate-500">Industry-built Notion systems.</p>
+            <p className="mt-3 text-sm text-navy-300">Industry-built Notion systems.</p>
           </div>
 
           {/* Nav links */}
@@ -77,7 +66,7 @@ export default function Footer() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-sm text-slate-600 transition-colors duration-200 hover:text-slate-900"
+                className="text-sm text-navy-300 transition-colors duration-200 hover:text-white"
               >
                 {link.label}
               </Link>
@@ -92,7 +81,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-slate-500 transition-colors duration-200 hover:text-slate-700"
+                className="flex items-center gap-1.5 text-sm text-navy-300 transition-colors duration-200 hover:text-gold-400"
                 aria-label={social.label}
               >
                 {social.icon}
@@ -103,10 +92,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-navy-800 pt-6 text-xs text-navy-400 sm:flex-row">
           <p>
             &copy; {currentYear} Ennis Studio. All rights reserved. |{' '}
-            <a href={`mailto:${siteConfig.email}`} className="underline hover:text-slate-600">
+            <a href={`mailto:${siteConfig.email}`} className="underline hover:text-gold-400">
               {siteConfig.email}
             </a>
           </p>
@@ -114,7 +103,7 @@ export default function Footer() {
             href="https://www.perplexity.ai/computer"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-400 transition-colors hover:text-slate-600"
+            className="text-navy-400 transition-colors hover:text-navy-200"
           >
             Created with Perplexity Computer
           </a>
