@@ -166,7 +166,7 @@ export default function About() {
             {/* Profile photo */}
             <div className="flex-shrink-0">
               <img
-                src="/images/ben-ennis.jpg"
+                src="/images/ben-ennis.jpeg"
                 alt="Ben Ennis, Founder of Ennis Studio"
                 className="h-24 w-24 rounded-full object-cover object-top shadow-md ring-2 ring-indigo-100"
               />
