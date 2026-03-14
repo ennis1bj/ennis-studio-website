@@ -163,11 +163,13 @@ export default function About() {
         <div className="container-content max-w-3xl">
           <h2 className="mb-10 text-2xl font-bold text-slate-900 sm:text-3xl">Meet the founder</h2>
           <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
-            {/* Avatar */}
+            {/* Profile photo */}
             <div className="flex-shrink-0">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-indigo-600 text-xl font-bold text-white shadow-md">
-                BE
-              </div>
+              <img
+                src="/images/ben-ennis.jpg"
+                alt="Ben Ennis, Founder of Ennis Studio"
+                className="h-24 w-24 rounded-full object-cover object-top shadow-md ring-2 ring-indigo-100"
+              />
             </div>
             {/* Bio */}
             <div className="space-y-4">
