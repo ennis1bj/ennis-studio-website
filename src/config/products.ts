@@ -14,16 +14,16 @@ export const portfolioProducts: PortfolioProduct[] = [
   {
     slug: 'guardhound',
     name: 'GuardHound',
-    tagline: 'Breach monitoring and compliance intelligence for modern businesses.',
-    description: 'GuardHound is a breach monitoring and compliance intelligence platform. It monitors data breaches, dark web exposure, and compliance posture for businesses and MSPs.',
-    category: 'Cybersecurity / Compliance',
+    tagline: 'Domain security monitoring for founders, agencies, and IT teams.',
+    description: 'GuardHound is an all-in-one domain security monitoring platform. It runs nine parallel checks — SSL certificates, CVE vulnerabilities, DNS and email security, lookalike domains, WHOIS changes, malware flags, subdomain discovery, and breach exposure — then delivers a 0-100 security score with continuous alerting.',
+    category: 'Cybersecurity / Domain Security',
     url: 'https://guardhound.io',
     status: 'live',
     isInternal: false,
     highlights: [
-      'Real-time breach monitoring and alerts',
-      'Dark web exposure scanning',
-      'Compliance posture tracking for MSPs'
+      'Nine parallel security checks with a 0-100 domain score',
+      'SSL expiry alerts, CVE detection, and lookalike domain scanning',
+      'Continuous monitoring with hourly scans and email alerts'
     ]
   },
   {
