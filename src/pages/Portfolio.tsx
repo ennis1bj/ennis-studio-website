@@ -3,6 +3,7 @@ import { portfolioProducts } from '../config/products';
 import Button from '../components/Button';
 import Badge from '../components/Badge';
 import { ArrowRight, ExternalLink } from 'lucide-react';
+import ProductIcon from '../components/ProductIcon';
 
 export default function Portfolio() {
   useDocumentMeta({
@@ -34,6 +35,7 @@ export default function Portfolio() {
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-3">
+                      <ProductIcon product={product} size="lg" />
                       <h2 className="text-2xl font-bold text-slate-900">{product.name}</h2>
                       <Badge variant="outline">{product.category}</Badge>
                       <Badge variant="accent">

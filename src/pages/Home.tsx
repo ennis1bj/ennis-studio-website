@@ -4,6 +4,7 @@ import { portfolioProducts } from '../config/products';
 import Button from '../components/Button';
 import Badge from '../components/Badge';
 import { Search, Server, Bot, Target, ArrowRight, ExternalLink } from 'lucide-react';
+import ProductIcon from '../components/ProductIcon';
 
 const services = [
   {
@@ -74,7 +75,10 @@ export default function Home() {
                 key={product.slug}
                 className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
               >
-                <Badge variant="outline">{product.category}</Badge>
+                <div className="flex items-center gap-3">
+                  <ProductIcon product={product} size="sm" />
+                  <Badge variant="outline">{product.category}</Badge>
+                </div>
                 <h3 className="mt-4 text-xl font-bold text-slate-900">{product.name}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{product.tagline}</p>
                 <ul className="mt-4 flex-1 space-y-2">

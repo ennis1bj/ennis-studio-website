@@ -3,6 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { portfolioProducts } from '../config/products';
 import FAQAccordion from '../components/FAQAccordion';
+import ProductIcon from '../components/ProductIcon';
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/benjamin-ennis-ab3a8b60/';
 
@@ -186,10 +187,15 @@ export default function About() {
                 key={product.slug}
                 className="rounded-xl border border-slate-200 bg-white p-6"
               >
-                <p className="text-xs font-medium uppercase tracking-wider text-gold-600">
-                  {product.category}
-                </p>
-                <h3 className="mt-2 text-lg font-semibold text-slate-900">{product.name}</h3>
+                <div className="flex items-center gap-3">
+                  <ProductIcon product={product} size="md" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900">{product.name}</h3>
+                    <p className="text-xs font-medium uppercase tracking-wider text-gold-600">
+                      {product.category}
+                    </p>
+                  </div>
+                </div>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{product.tagline}</p>
               </div>
             ))}

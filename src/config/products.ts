@@ -8,6 +8,8 @@ export interface PortfolioProduct {
   status: 'live' | 'beta' | 'in-development';
   isInternal: boolean;
   highlights: string[];
+  icon: string; // lucide-react icon name
+  brandColor: string; // Tailwind color class for icon background
 }
 
 export const portfolioProducts: PortfolioProduct[] = [
@@ -24,22 +26,26 @@ export const portfolioProducts: PortfolioProduct[] = [
       'Nine parallel security checks with a 0-100 domain score',
       'SSL expiry alerts, CVE detection, and lookalike domain scanning',
       'Continuous monitoring with hourly scans and email alerts'
-    ]
+    ],
+    icon: 'Shield',
+    brandColor: 'emerald'
   },
   {
     slug: 'guestymigrate',
     name: 'GuestyMigrate',
-    tagline: 'Seamless data migration for short-term rental operators.',
-    description: 'GuestyMigrate is a data migration tool for short-term rental operators moving their property management data into or out of the Guesty platform.',
-    category: 'Hospitality Tech / Property Management',
+    tagline: 'Automated account-to-account migration for Guesty property managers.',
+    description: 'GuestyMigrate transfers listings, reservations, guests, photos, rate strategies, saved replies, and all 11 data categories between Guesty accounts — fully automated with complex multi-unit listing support, 100% ID remapping, and a verification report. No CSVs, no manual data entry.',
+    category: 'Hospitality Tech / Data Migration',
     url: 'https://guestymigrate.com',
     status: 'live',
     isInternal: false,
     highlights: [
-      'One-click migration into and out of Guesty',
-      'Property, reservation, and guest data transfer',
-      'Built for short-term rental operators'
-    ]
+      'All 11 Guesty data categories migrated with full ID remapping',
+      'Complex multi-unit listing hierarchies preserved automatically',
+      'AES-256 encrypted with real-time progress and verification report'
+    ],
+    icon: 'ArrowRightLeft',
+    brandColor: 'sky'
   },
   {
     slug: 'notion-studio',
@@ -54,6 +60,8 @@ export const portfolioProducts: PortfolioProduct[] = [
       'InsureFlow for insurance agents',
       'VetOS for veterinary practices',
       'Therapist OS for solo therapists'
-    ]
+    ],
+    icon: 'LayoutTemplate',
+    brandColor: 'violet'
   }
 ];
