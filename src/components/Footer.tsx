@@ -1,11 +1,18 @@
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../config/site';
 
-const footerLinks = [
+const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'Templates', to: '/templates' },
+  { label: 'Portfolio', to: '/#portfolio' },
+  { label: 'Notion Studio', to: '/templates' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
+];
+
+const productLinks = [
+  { label: 'GuardHound', href: 'https://guardhound.io' },
+  { label: 'GuestyMigrate', href: 'https://guestymigrate.com' },
+  { label: 'Notion Studio', to: '/templates' },
 ];
 
 const socialLinks = [
@@ -27,15 +34,6 @@ const socialLinks = [
       </svg>
     ),
   },
-  {
-    label: 'Gumroad',
-    href: siteConfig.social.gumroad || '#',
-    icon: (
-      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13v2h4v6h-4v2h6V7h-6z" />
-      </svg>
-    ),
-  },
 ];
 
 export default function Footer() {
@@ -44,7 +42,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-navy-200 bg-navy-950 text-white">
       <div className="mx-auto max-w-content px-6 py-12 md:px-8">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2.5" aria-label="Ennis Studio home">
@@ -57,37 +55,87 @@ export default function Footer() {
                 Ennis Studio
               </span>
             </Link>
-            <p className="mt-3 text-sm text-navy-300">Industry-built Notion systems.</p>
+            <p className="mt-3 text-sm text-navy-300">Building software that compounds.</p>
           </div>
 
           {/* Nav links */}
-          <div className="flex flex-wrap gap-6">
-            {footerLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="text-sm text-navy-300 transition-colors duration-200 hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-navy-400">
+              Navigate
+            </h3>
+            <div className="flex flex-col gap-2">
+              {navLinks.map((link) =>
+                link.to.startsWith('/#') ? (
+                  <a
+                    key={link.to}
+                    href={link.to}
+                    className="text-sm text-navy-300 transition-colors duration-200 hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className="text-sm text-navy-300 transition-colors duration-200 hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
+            </div>
+          </div>
+
+          {/* Product links */}
+          <div>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-navy-400">
+              Our Products
+            </h3>
+            <div className="flex flex-col gap-2">
+              {productLinks.map((link) =>
+                'href' in link && link.href ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy-300 transition-colors duration-200 hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    to={'to' in link ? link.to! : '/'}
+                    className="text-sm text-navy-300 transition-colors duration-200 hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
+            </div>
           </div>
 
           {/* Social links */}
-          <div className="flex gap-4 md:justify-end">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-navy-300 transition-colors duration-200 hover:text-gold-400"
-                aria-label={social.label}
-              >
-                {social.icon}
-                <span className="hidden sm:inline">{social.label}</span>
-              </a>
-            ))}
+          <div>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-navy-400">
+              Connect
+            </h3>
+            <div className="flex flex-col gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm text-navy-300 transition-colors duration-200 hover:text-gold-400"
+                  aria-label={social.label}
+                >
+                  {social.icon}
+                  <span>{social.label}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -99,14 +147,6 @@ export default function Footer() {
               {siteConfig.email}
             </a>
           </p>
-          <a
-            href="https://www.perplexity.ai/computer"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-navy-400 transition-colors hover:text-navy-200"
-          >
-            Created with Perplexity Computer
-          </a>
         </div>
       </div>
     </footer>

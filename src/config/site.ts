@@ -3,7 +3,7 @@ export const siteConfig = {
   domain: "https://ennis-studio.com",
   email: "hello@ennis-studio.com",
   description:
-    "Ennis Studio builds premium, industry-specific Notion operating systems for professionals who need a structured workspace — not a template they have to design themselves.",
+    "Ennis Studio is a software portfolio company. We build and operate SaaS products as long-term investments and offer software development research and prototyping services.",
   social: {
     linkedin: "https://www.linkedin.com/in/benjamin-ennis-ab3a8b60/",
     notionMarketplace: "https://www.notion.so/@ennis-studio",

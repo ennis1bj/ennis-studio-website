@@ -4,7 +4,8 @@ import Button from './Button';
 
 const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'Templates', to: '/templates' },
+  { label: 'Portfolio', to: '/#portfolio' },
+  { label: 'Notion Studio', to: '/templates' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
 ];
@@ -12,6 +13,12 @@ const navLinks = [
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+
+  const isActive = (to: string) => {
+    if (to === '/') return location.pathname === '/';
+    if (to.startsWith('/#')) return location.pathname === '/' && location.hash === to.slice(1);
+    return location.pathname === to;
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-navy-100 bg-white/95 backdrop-blur-sm">
@@ -34,20 +41,34 @@ export default function Nav() {
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={`text-sm font-medium transition-colors duration-200 ${
-                location.pathname === link.to
-                  ? 'text-gold-600'
-                  : 'text-navy-600 hover:text-navy-900'
-              }`}
-            >
-              {link.label}
-            </Link>
+            link.to.startsWith('/#') ? (
+              <a
+                key={link.to}
+                href={link.to}
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  isActive(link.to)
+                    ? 'text-gold-600'
+                    : 'text-navy-600 hover:text-navy-900'
+                }`}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  isActive(link.to)
+                    ? 'text-gold-600'
+                    : 'text-navy-600 hover:text-navy-900'
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
-          <Button to="/templates" size="sm">
-            Browse templates
+          <Button to="/contact" size="sm">
+            Work With Us
           </Button>
         </div>
 
@@ -80,22 +101,37 @@ export default function Nav() {
       >
         <div className="flex flex-col gap-1 px-6 py-4">
           {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              onClick={() => setMobileOpen(false)}
-              className={`rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
-                location.pathname === link.to
-                  ? 'bg-gold-50 text-gold-700'
-                  : 'text-navy-600 hover:bg-navy-50 hover:text-navy-900'
-              }`}
-            >
-              {link.label}
-            </Link>
+            link.to.startsWith('/#') ? (
+              <a
+                key={link.to}
+                href={link.to}
+                onClick={() => setMobileOpen(false)}
+                className={`rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                  isActive(link.to)
+                    ? 'bg-gold-50 text-gold-700'
+                    : 'text-navy-600 hover:bg-navy-50 hover:text-navy-900'
+                }`}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setMobileOpen(false)}
+                className={`rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                  isActive(link.to)
+                    ? 'bg-gold-50 text-gold-700'
+                    : 'text-navy-600 hover:bg-navy-50 hover:text-navy-900'
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
           <div className="mt-2">
-            <Button to="/templates" className="w-full" onClick={() => setMobileOpen(false)}>
-              Browse templates
+            <Button to="/contact" className="w-full" onClick={() => setMobileOpen(false)}>
+              Work With Us
             </Button>
           </div>
         </div>
