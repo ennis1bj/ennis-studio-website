@@ -31,7 +31,7 @@ export const templatesConfig: Template[] = [
     tagline: "The complete Notion OS for independent insurance professionals.",
     description:
       "InsureFlow is a fully relational Notion workspace built for insurance agents and brokers. Manage your client pipeline, policy renewals, follow-up tasks, and compliance notes in one structured system — no spreadsheets, no scattered docs.",
-    price: "$29",
+    price: "$39",
     idealFor: "Independent insurance agents & brokers",
     complexity: "Intermediate",
     badges: ["Industry-specific", "Client management", "Renewal tracking"],
@@ -67,7 +67,7 @@ export const templatesConfig: Template[] = [
     tagline: "A Notion operating system purpose-built for veterinary practices.",
     description:
       "VetOS gives independent vet practices and small clinics a structured Notion workspace to manage patients, appointments, staff tasks, inventory, and client communications — all connected through a relational database architecture.",
-    price: "$29",
+    price: "$35",
     idealFor: "Independent vet practices & clinic operators",
     complexity: "Intermediate",
     badges: ["Industry-specific", "Patient management", "Team-ready"],
