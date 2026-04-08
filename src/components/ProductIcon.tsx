@@ -1,16 +1,18 @@
-import { Shield, ArrowRightLeft, LayoutTemplate } from 'lucide-react';
+import { Shield, ArrowRightLeft, LayoutTemplate, Brain } from 'lucide-react';
 import type { PortfolioProduct } from '../config/products';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Shield,
   ArrowRightLeft,
   LayoutTemplate,
+  Brain,
 };
 
 const colorMap: Record<string, { bg: string; text: string }> = {
   emerald: { bg: 'bg-emerald-100', text: 'text-emerald-700' },
   sky: { bg: 'bg-sky-100', text: 'text-sky-700' },
   violet: { bg: 'bg-violet-100', text: 'text-violet-700' },
+  indigo: { bg: 'bg-indigo-100', text: 'text-indigo-700' },
 };
 
 interface ProductIconProps {

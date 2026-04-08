@@ -5,6 +5,7 @@ import Button from './Button';
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Portfolio', to: '/#portfolio' },
+  { label: 'AI Playbook', to: '/playbook' },
   { label: 'Notion Studio', to: '/templates' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },

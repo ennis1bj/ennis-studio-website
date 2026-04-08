@@ -48,6 +48,23 @@ export const portfolioProducts: PortfolioProduct[] = [
     brandColor: 'sky'
   },
   {
+    slug: 'ai-playbook',
+    name: 'The AI Agent Playbook',
+    tagline: '50 production-ready system prompts for ChatGPT, Claude, and Gemini.',
+    description: 'A 92-page PDF with 50 copy-paste system prompts across 8 business categories — sales, marketing, support, operations, product, finance, HR, and strategy. Each prompt is 200-450 words and production-grade.',
+    category: 'Digital Product / AI Tools',
+    url: '/playbook',
+    status: 'live' as const,
+    isInternal: true,
+    highlights: [
+      '50 prompts across 8 business categories',
+      'Works with ChatGPT, Claude, Gemini, and any LLM',
+      '$29 one-time — instant PDF download'
+    ],
+    icon: 'Brain',
+    brandColor: 'indigo'
+  },
+  {
     slug: 'notion-studio',
     name: 'Notion Development Studio',
     tagline: 'Premium, industry-specific Notion operating systems for professionals.',

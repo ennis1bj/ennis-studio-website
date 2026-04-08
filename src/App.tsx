@@ -5,6 +5,7 @@ import Templates from './pages/Templates';
 import TemplateDetail from './pages/TemplateDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Playbook from './pages/Playbook';
 import Portfolio from './pages/Portfolio';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/templates/:slug" element={<TemplateDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/playbook" element={<Playbook />} />
         </Route>
       </Routes>
     </BrowserRouter>
