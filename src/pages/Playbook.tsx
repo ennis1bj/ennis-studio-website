@@ -1,7 +1,7 @@
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import Button from '../components/Button';
 
-const CHECKOUT_URL = '#stripe-pending'; // Replace with Stripe payment link
+const CHECKOUT_URL = 'https://buy.stripe.com/bJecN4gyx9i715f5sAcAo04';
 
 const categories = [
   { name: 'Sales & Outreach', count: 7, samples: ['Cold Email Writer', 'Follow-Up Sequence', 'Objection Handler'] },
