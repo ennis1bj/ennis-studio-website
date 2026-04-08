@@ -1,12 +1,3 @@
-// ============================================================
-// MARKETPLACE INTEGRATION NOTE
-// All notionUrl fields currently point to the live Notion .site
-// preview pages. Once Stripe checkout is connected on Notion
-// Marketplace, Gumroad, and/or Lemon Squeezy, replace each
-// notionUrl with the direct checkout URL for that platform.
-// No other file in the project needs to change.
-// ============================================================
-
 export interface Template {
   slug: string;
   name: string;
@@ -18,6 +9,7 @@ export interface Template {
   badges: string[];
   featured: boolean;
   notionUrl: string;
+  stripeUrl: string;
   databases: string[];
   views: string[];
   useCases: string[];
@@ -38,6 +30,8 @@ export const templatesConfig: Template[] = [
     featured: true,
     notionUrl:
       "https://shimmering-quark-7cd.notion.site/InsureFlow-Home-322f22489895813e85f0c3f6a372efff",
+    stripeUrl:
+      "https://buy.stripe.com/5kQ00i96565V15f7AIcAo03",
     databases: [
       "Clients (policy status, renewal dates, contact info)",
       "Policies (linked to Clients)",
@@ -74,6 +68,8 @@ export const templatesConfig: Template[] = [
     featured: true,
     notionUrl:
       "https://shimmering-quark-7cd.notion.site/VetOS-Home-322f22489895819abb0bf0932a961d05",
+    stripeUrl:
+      "https://buy.stripe.com/eVq28q3LL65VdS1cV2cAo02",
     databases: [
       "Patients (species, owner, visit history)",
       "Appointments (linked to Patients and Staff)",
@@ -111,6 +107,8 @@ export const templatesConfig: Template[] = [
     featured: true,
     notionUrl:
       "https://shimmering-quark-7cd.notion.site/Therapist-OS-Home-322f2248989581eb83e5df0084dfde60",
+    stripeUrl:
+      "https://buy.stripe.com/6oU28q8213XNaFP8EMcAo01",
     databases: [
       "Caseload (coded or anonymous client IDs, status, start date)",
       "Session notes (linked to caseload, date-stamped)",

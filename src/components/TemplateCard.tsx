@@ -29,22 +29,32 @@ export default function TemplateCard({ template, showViewDetails = false }: Temp
 
       <div className="mt-auto flex flex-col gap-3">
         <a
-          href={template.notionUrl}
+          href={template.stripeUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-indigo-700 active:bg-indigo-800 shadow-sm hover:shadow-md"
         >
-          Preview &amp; get template
+          Buy template
           <span aria-hidden="true">&rarr;</span>
         </a>
-        {showViewDetails && (
-          <Link
-            to={`/templates/${template.slug}`}
+        <div className="flex gap-3">
+          <a
+            href={template.notionUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-slate-50 hover:border-slate-400"
           >
-            View details
-          </Link>
-        )}
+            Preview
+          </a>
+          {showViewDetails && (
+            <Link
+              to={`/templates/${template.slug}`}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-slate-50 hover:border-slate-400"
+            >
+              Details
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

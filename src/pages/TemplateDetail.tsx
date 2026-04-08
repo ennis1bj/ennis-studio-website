@@ -63,17 +63,25 @@ export default function TemplateDetail() {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <span className="text-3xl font-bold text-indigo-600">{template.price}</span>
                 <a
-                  href={template.notionUrl}
+                  href={template.stripeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-7 py-3.5 text-base font-medium text-white shadow-sm transition-all duration-200 hover:bg-indigo-700 hover:shadow-md active:bg-indigo-800"
                 >
-                  Preview &amp; get template
+                  Buy template
                   <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  href={template.notionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-7 py-3.5 text-base font-medium text-slate-700 transition-all duration-200 hover:bg-slate-50 hover:border-slate-400"
+                >
+                  Preview template
                 </a>
               </div>
               <p className="mt-3 text-sm text-slate-400">
-                Opens your free preview on Notion. No account required to browse.
+                Secure checkout via Stripe. Preview opens on Notion — no account required.
               </p>
 
               {/* What's Included */}
@@ -208,16 +216,24 @@ export default function TemplateDetail() {
                 <div className="mt-6 border-t border-slate-100 pt-6">
                   <span className="text-3xl font-bold text-indigo-600">{template.price}</span>
                   <a
-                    href={template.notionUrl}
+                    href={template.stripeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:bg-indigo-700 hover:shadow-md active:bg-indigo-800"
                   >
-                    Preview &amp; get template
+                    Buy template
                     <span aria-hidden="true">&rarr;</span>
                   </a>
+                  <a
+                    href={template.notionUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-slate-50 hover:border-slate-400"
+                  >
+                    Preview on Notion
+                  </a>
                   <p className="mt-3 text-center text-xs text-slate-400">
-                    Free preview — no account required
+                    Secure checkout via Stripe
                   </p>
                 </div>
               </div>
@@ -234,12 +250,12 @@ export default function TemplateDetail() {
             <p className="text-lg font-bold text-indigo-600">{template.price}</p>
           </div>
           <a
-            href={template.notionUrl}
+            href={template.stripeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:bg-indigo-700 active:bg-indigo-800"
           >
-            Preview &amp; get template
+            Buy template
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
