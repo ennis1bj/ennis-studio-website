@@ -1,9 +1,9 @@
-import { Shield, ArrowRightLeft, LayoutTemplate, Brain } from 'lucide-react';
+import { Shield, ScanSearch, LayoutTemplate, Brain } from 'lucide-react';
 import type { PortfolioProduct } from '../config/products';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Shield,
-  ArrowRightLeft,
+  ScanSearch,
   LayoutTemplate,
   Brain,
 };

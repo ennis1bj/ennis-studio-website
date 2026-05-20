@@ -9,7 +9,7 @@ export default function Portfolio() {
   useDocumentMeta({
     title: 'Portfolio — Ennis Studio',
     description:
-      'Explore the Ennis Studio software portfolio: GuardHound, GuestyMigrate, and our Notion Development Studio.',
+      'Explore the Ennis Studio software portfolio: GuardHound, CertIndex, and our Notion Development Studio.',
   });
 
   return (

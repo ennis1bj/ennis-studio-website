@@ -31,20 +31,20 @@ export const portfolioProducts: PortfolioProduct[] = [
     brandColor: 'emerald'
   },
   {
-    slug: 'guestymigrate',
-    name: 'GuestyMigrate',
-    tagline: 'Automated account-to-account migration for Guesty property managers.',
-    description: 'GuestyMigrate transfers listings, reservations, guests, photos, rate strategies, saved replies, and all 11 data categories between Guesty accounts — fully automated with complex multi-unit listing support, 100% ID remapping, and a verification report. No CSVs, no manual data entry.',
-    category: 'Hospitality Tech / Data Migration',
-    url: 'https://guestymigrate.com',
+    slug: 'certindex',
+    name: 'CertIndex',
+    tagline: 'A real-time index of every TLS certificate logged to public CT logs.',
+    description: 'CertIndex is a real-time index of every TLS certificate logged to a public Certificate Transparency (CT) log — exposed over REST, MCP, and an SSE firehose. Search every cert ever issued, monitor new issuance for your domains, and stream the live firehose. Built for security teams, AppSec, asset-management tools, and AI agents.',
+    category: 'Cybersecurity / Certificate Transparency',
+    url: 'https://ctindex.io',
     status: 'live',
     isInternal: false,
     highlights: [
-      'All 11 Guesty data categories migrated with full ID remapping',
-      'Complex multi-unit listing hierarchies preserved automatically',
-      'AES-256 encrypted with real-time progress and verification report'
+      'REST API, MCP server, and SSE firehose over a unified CT index',
+      'Subdomain enumeration, alert subscriptions, and Stripe-backed billing',
+      'Drops into Claude Desktop, Cursor, and Windsurf via Streamable HTTP MCP'
     ],
-    icon: 'ArrowRightLeft',
+    icon: 'ScanSearch',
     brandColor: 'sky'
   },
   {
