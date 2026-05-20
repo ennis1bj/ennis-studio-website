@@ -11,7 +11,7 @@ const navLinks = [
 
 const productLinks = [
   { label: 'GuardHound', href: 'https://guardhound.io' },
-  { label: 'GuestyMigrate', href: 'https://guestymigrate.com' },
+  { label: 'CertIndex', href: 'https://ctindex.io' },
   { label: 'Notion Studio', to: '/templates' },
 ];
 

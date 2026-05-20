@@ -47,7 +47,7 @@ const extendedFAQs = [
   {
     question: 'What products does Ennis Studio operate?',
     answer:
-      'We currently operate three products: GuardHound (breach monitoring and compliance intelligence), GuestyMigrate (data migration for short-term rental operators), and a Notion Development Studio producing premium industry-specific templates.',
+      'We currently operate three products: GuardHound (breach monitoring and compliance intelligence), CertIndex (a real-time index of TLS certificates from public CT logs via REST, MCP, and SSE firehose), and a Notion Development Studio producing premium industry-specific templates.',
   },
   {
     question: 'Do you build products for other companies?',
